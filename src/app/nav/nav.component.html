@@ -1,0 +1,17 @@
+<md-toolbar>
+  <div class="container">
+
+    <md-select placeholder="Campaign">
+      <md-option *ngFor="let campaign of profile.campaigns" [value]="campaign">{{ campaign.name }}</md-option>
+      <md-option [value]="create">Create Campaign</md-option>
+    </md-select>
+    <span>{{ profile.email }}</span>
+    <span class="fill-remaining-space"></span>
+    <button *ngIf="!(user | async)?.uid" class="log-out" md-button (click)="login()">
+      Login
+    </button>
+    <button *ngIf="(user | async)?.uid" class="log-out" md-button (click)="logout()">
+      Log Out
+    </button>
+  </div>
+</md-toolbar>

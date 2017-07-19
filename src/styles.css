@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
+body{
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.mat-input-underline {
+    border-color: grey;
+}
+.mat-input-placeholder {
+    color: grey;
+}
